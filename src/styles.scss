@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("./form.scss");
+
+body {
+   overflow: scroll;
+}
+
+.swal2-styled.swal2-confirm {
+   box-shadow: 5px 5px 5px 0px rgb(0, 0, 0, 0.2);
+   padding: 8px 30px !important;
+   background-color: rgb(255, 119, 0) !important;
+}
+.swal2-styled.swal2-confirm:focus {
+   color: black !important;
+}
+
+.small-flag {
+   max-width: 50px;
+}
+
+.small-flag-mini {
+   max-width: 35px;
+}
+
+@media screen and (max-width: 768px) {
+   .title_h3 {
+      font-size: 2.5rem !important;
+   }
+}
+

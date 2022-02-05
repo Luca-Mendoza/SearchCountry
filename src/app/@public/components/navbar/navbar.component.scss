@@ -1,0 +1,42 @@
+.nav-container {
+    background-color: #ff6d00;
+    height: 70px;
+}
+
+.img-logo {
+    top: -4px;
+    max-width: 70px;
+}
+
+.item-menu {
+    color: rgba(0, 0, 0, 0.612);
+    margin-top: 3px;
+}
+
+.link-nav {
+    height: 70px;
+}
+
+@media all and (max-width: 768px) {
+    .nav-container {
+        height: 60px;
+    }
+
+    .img-logo {
+        top: -3px;
+        max-width: 60px;
+    }
+
+    .item-menu {
+        margin-top: 2px;
+    }
+
+    .link-nav {
+        height: 60px;
+        text-transform: uppercase;
+    }
+}
+
+.sidenav {
+    background-color: rgba(210, 105, 30, 0.79);
+}

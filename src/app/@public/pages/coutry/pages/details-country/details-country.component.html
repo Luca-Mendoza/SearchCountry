@@ -1,0 +1,38 @@
+<div *ngIf="!country ; else divCountry " class="row">
+
+</div>
+
+<ng-template #divCountry>
+  <h3 class="title_h3  animate__animated  animate__slideInRight">{{ title | titlecase }} - {{ country.name | titlecase
+    }} </h3>
+  <hr />
+  <div class="row">
+    <div class="col s12 l6">
+      <img class="responsive-img item-img" [src]="country.flag " [alt]="country.name ">
+    </div>
+    <div class="col s12 l6">
+      <ul class="collection with-header">
+        <li class="collection-header">
+          <h4>Information - {{ country.name | titlecase }}</h4>
+        </li>
+        <li class="collection-item"><strong> Flag : </strong><img class="small-flag-mini " [src]="country.flag "
+            [alt]="country.name "></li>
+        <li class="collection-item"><strong>Capital :</strong> {{ country.capital}}</li>
+        <li class="collection-item"><strong>Region :</strong> {{country.region}}</li>
+        <li class="collection-item"><strong>Sub-Region :</strong> {{country.subregion}}</li>
+        <li class="collection-item"><strong>Time Zones :</strong> {{country.timezones}}</li>
+        <li class="collection-item" *ngFor="let item of country.currencies "><strong>Currencie :</strong> [ <strong>name
+            :</strong> {{item.name}} - <strong>code :</strong> {{item.code}} - <strong>symbol :</strong> {{item.symbol}}
+          ]
+
+        </li>
+
+        <li class="collection-item"><strong>Poblation :</strong> {{country.population | number}}</li>
+        <li class="collection-item"><strong>Number Code :</strong> {{country.numericCode}}</li>
+        <li class="collection-item"><strong>Alpha3 Code :</strong> {{country.alpha3Code}}</li>
+
+      </ul>
+    </div>
+
+  </div>
+</ng-template>

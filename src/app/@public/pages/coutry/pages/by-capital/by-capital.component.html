@@ -1,0 +1,6 @@
+<app-search (OnEnter)="searchCapital( $event )" (onDebounce)="sugerencias( $event )" placeholder="Buscar Capital...">
+</app-search>
+<hr>
+<h3 class="title_h3  animate__animated  animate__slideInRight">{{ title | titlecase }}</h3>
+<hr />
+<app-table-pagination [items]="itemsSearch"></app-table-pagination>

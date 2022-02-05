@@ -1,0 +1,43 @@
+<nav class="nav-container">
+  <div class="nav-wrapper container">
+    <div class="container">
+      <a routerLink="'/'" class="brand-logo center">
+        <img class=" img-logo" src="./../../../assets/img/logo.png" alt="Logo" />
+      </a>
+    </div>
+    <a href="#" data-target="navbar-open" class="sidenav-trigger item-menu"><i class="material-icons">menu</i></a>
+
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li>
+        <a class="link-nav" [routerLink]="['coutry']" routerLinkActive="active">Country</a>
+      </li>
+      <li>
+        <a class="link-nav" [routerLink]="['coutry/by-capital']" routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">Capital</a>
+      </li>
+
+      <li>
+        <a class="link-nav" [routerLink]="['coutry/by-region']" routerLinkActive="active">Continent</a>
+      </li>
+
+    </ul>
+  </div>
+
+</nav>
+
+
+
+<ul class="sidenav center-align" id="navbar-open">
+  <li>
+    <a class="link-nav" [routerLink]="['coutry']" routerLinkActive="active">Country</a>
+  </li>
+  <li>
+    <a class="link-nav" [routerLink]="['coutry/by-capital']" routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }">Capital</a>
+  </li>
+
+  <li>
+    <a class="link-nav" [routerLink]="['coutry/by-region']" routerLinkActive="active">Continent</a>
+  </li>
+
+</ul>

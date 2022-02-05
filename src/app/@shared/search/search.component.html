@@ -1,0 +1,7 @@
+<div class="animate__animated animate__bounceInDown">
+  <form (ngSubmit)="searchMain()" autocomplete="off" class=" search-items col s12">
+    <i class="search-icon"><span class="material-icons">search</span></i>
+    <input type="text" class="input-field" name="searchTerm" [placeholder]="placeholder" (input)="teclaPrecionada()"
+      [(ngModel)]="searchTerm" />
+  </form>
+</div>

@@ -1,0 +1,14 @@
+<app-search (OnEnter)="searchCoutry( $event )" (onDebounce)="suggestions( $event )" placeholder="Search coutry...">
+</app-search>
+<div class="collection container-suggestions" *ngIf="searchSuggestions">
+    <a *ngFor="let country of countrySuggestions" [routerLink]="['/coutry', country.alpha2Code]"
+        class="collection-item">Go : "{{country.name}}"</a>
+
+    <a *ngFor="let country of countrySuggestions" (click)="searchSuggestions( searchTerm )" class="collection-item">
+        Search : "{{searchTerm}}"</a>
+
+</div>
+<hr>
+<h3 class="title_h3  animate__animated  animate__slideInRight">{{ title | titlecase }}</h3>
+<hr />
+<app-table-pagination [items]="itemsSearch"></app-table-pagination>

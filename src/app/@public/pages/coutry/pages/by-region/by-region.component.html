@@ -1,0 +1,12 @@
+<div class="row container-btn animate__animated animate__bounceInDown ">
+    <div class="col ">
+        <button (click)="activeRegion(item)" class="btn btn-item waves-effect " [class]="getClassCss(item)"
+            *ngFor=" let item of region">
+            {{item}}</button>
+    </div>
+</div>
+<hr>
+<h3 class="title_h3 animate__animated  animate__slideInRight">{{ title | titlecase }} <span *ngIf="regionActive != ''">-
+        {{regionActive | titlecase}}</span></h3>
+<hr />
+<app-table-pagination [items]="itemsSearch"></app-table-pagination>

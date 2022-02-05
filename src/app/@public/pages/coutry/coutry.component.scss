@@ -1,0 +1,19 @@
+.container-suggestions {
+    top: -29px;
+    max-width: 97.5%;
+    border: none;
+}
+
+.collection-item {
+    background-color: rgba(210, 105, 30, 0.482) !important;
+    color: black !important;
+    border-radius: 5px !important;
+    transition: all 0.5s ease-in-out;
+}
+
+.collection-item:hover {
+    background-color: rgba(0, 0, 0, 0.482) !important;
+    color: white !important;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}

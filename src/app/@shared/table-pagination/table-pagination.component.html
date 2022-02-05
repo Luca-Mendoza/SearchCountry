@@ -1,0 +1,29 @@
+<div *ngIf="items.length > 0" class="animate__animated animate__fadeIn">
+  <table class="striped centered">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Flag</th>
+        <th>name</th>
+        <th>population</th>
+        <th>details</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let coutry of items , let i = index">
+        <td>{{ i + 1 }}</td>
+
+        <td>
+          <img class="small-flag" [src]="coutry.flag " [alt]="coutry.name ">
+        </td>
+        <td>{{coutry.capital}}, {{ coutry.name }}</td>
+        <td>{{ coutry.population | number}}</td>
+
+        <td>
+          <a [routerLink]="['/coutry',  coutry.alpha2Code]" routerLinkActive="active">ver..</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
